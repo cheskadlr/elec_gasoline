@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>code01-4itg-Greet-MVC2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+  	<param-name>jdbcDriver</param-name>
+  	<param-value>QW3ELt19wnX4IncON0pytPYjJQ7R7KdcfgTP7pypuKI=</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>jdbcUrl</param-name>
+  	<param-value>ZObe4rdvMhFMUtf3CC/+Q3nAXRcyXo0qUo/GOzSJ7wNsvZQq3f4TmZJkOQC7kg71XbO2gr5d9W0f4iMphZ769A==</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>dbUserName</param-name>
+  	<param-value>NyiG//i7loPFfdUoO9BFuA==</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>dbPassword</param-name>
+  	<param-value>719bTBvphWewRiCiCj3D/A==</param-value>
+  </context-param>
+  
+  
+  <servlet>
+  	<servlet-name>GreetUserServlet</servlet-name>
+  	<servlet-class>ust.greet.controller.GreetUserServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>GreetUserServlet</servlet-name>
+  	<url-pattern>/greetuser.action</url-pattern>
+  </servlet-mapping>
+  
+  <listener>
+  	<listener-class>ust.greet.listener.DatabaseUserServletContextAttributeListener</listener-class>
+  </listener>
+  
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/error.jsp</location>
+  </error-page>
+  
+  <error-page>
+  	<exception-type>java.lang.NullPointerException</exception-type>
+  	<location>/error.jsp</location>
+  </error-page>
+  
+  <error-page>
+  	<exception-type>java.lang.Exception</exception-type>
+  	<location>/error.jsp</location>
+  </error-page>
+  
+   <error-page>
+  	<exception-type>ust.greet.utility.InvalidCreditCardNumberException</exception-type>
+  	<location>/error.jsp</location>
+  </error-page>
+  
+</web-app>

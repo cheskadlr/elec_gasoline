@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="code01-4itg-Greet-MVC2">
+        <wb-resource deploy-path="/" source-path="/web" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="mysql-connector-java-5.1.34.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Cheska Dela Rosa/Documents/16-17/2/ICS 114/drive-download-20170331T182644Z-001/mysql-connector-java-5.1.34.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="greet"/>
+        <property name="java-output-path" value="/code01-4itg-Greet-MVC2/build/classes"/>
+    </wb-module>
+</project-modules>
